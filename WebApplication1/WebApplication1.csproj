@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="C:\Users\Alumno\Desktop\Greatest Hits - web musical\Estilomusic.css" Link="Estilomusic.css" />
+    <Content Include="C:\Users\Alumno\Desktop\Greatest Hits - web musical\index.html" Link="index.html" />
+  </ItemGroup>
+
+</Project>

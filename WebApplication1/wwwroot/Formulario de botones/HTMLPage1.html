@@ -1,0 +1,58 @@
+﻿<html>
+<head>
+    ...
+    <script src="JavaScript1.js"></script>
+    <link href="StyleSheet2.css" rel="stylesheet" />
+</head>
+<body>
+    <body class="change" onload="return randomColor()">
+
+        <h1>Refresca para cambiar de color</h1>
+        <form>
+            <input type="text" id="valor" value="0" />
+            <button type="button" id="aumentar">Aumentar</button>
+            <button type="button" id="reducir">Reducir</button>
+
+            <script>
+                var numero = document.getElementById("valor");
+                var aumentar = document.getElementById("aumentar");
+                var reducir = document.getElementById("reducir");
+
+                var rojo = document.getElementById("rojo");
+                var verde = document.getElementById("verde");
+                var azul = document.getElementById("azul");
+
+                aumentar.addEventListener("click", function () {
+                    let numero = parseInt(valor.value, 10)
+                    numero++
+                    valor.value = numero;
+                    CambiarColorFondo();
+                })
+
+                reducir.addEventListener("click", function () {
+                    let numero = parseInt(valor.value, 10)
+                    numero--
+                    valor.value = numero;
+                    CambiarColorFondo();
+                })
+
+                function CambiarColorFondo() {
+                    let a = math.floor(math.random() * 256);
+                    let b = math.floor(math.random() * 256);
+                    let c = math.floor(math.random() * 256);
+                    document.body.style.backgroundcolor = 'rgb(' + a + ',' + b + ',' + c + ')'
+                }
+                function randomColor() {
+                    var color = '#';
+                    var colorCode = ['ffaf40', '2A9BFB', 'ff5967', '7870cc', '33ccbf']; // colors
+                    var className = document.getElementsByClassName("change"); // class name to random color
+                    var i;
+                    color += colorCode[Math.floor(Math.random() * colorCode.length)];
+                    for (var i = 0; i < className.length; i++) {
+                        className[i].style.backgroundColor = color;
+                    }
+                }
+            </script>
+        </form>
+    </body>
+</html>
